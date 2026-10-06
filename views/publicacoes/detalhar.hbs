@@ -1,0 +1,10 @@
+<article class="detalhe">
+  <a class="voltar" href="/publicacoes">← Voltar para as publicações</a>
+  <p class="categoria">{{publicacao.categoria}}</p>
+  <h1>{{publicacao.titulo}}</h1>
+  <p class="detalhe__conteudo">{{publicacao.conteudo}}</p>
+  <footer>
+    <span>Por {{publicacao.autor}}</span>
+    <span>Publicada em {{formatarData publicacao.createdAt}}</span>
+  </footer>
+</article>

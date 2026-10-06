@@ -1,0 +1,21 @@
+<header class="titulo-pagina">
+  <p class="rotulo">Consulta concluída</p>
+  <h1>{{titulo}}</h1>
+  <p>{{descricao}}</p>
+  <p class="contador">
+    <strong>{{quantidade}}</strong> publicação(ões) encontrada(s).
+  </p>
+</header>
+
+{{#if possuiPublicacoes}}
+  <section class="grade" aria-label="Lista de publicações">
+    {{#each publicacoes}}
+      {{> cartao-publicacao}}
+    {{/each}}
+  </section>
+{{else}}
+  <section class="estado-vazio">
+    <h2>Nenhuma publicação cadastrada</h2>
+    <p>O banco de dados ainda não possui registros para apresentar.</p>
+  </section>
+{{/if}}
