@@ -1,0 +1,22 @@
+<section class="hero">
+  <p class="rotulo">Servidor funcionando</p>
+  <h1>{{titulo}}</h1>
+  <p class="hero__subtitulo">{{subtitulo}}</p>
+  <p>
+    Esta página foi produzida no servidor. A aplicação está pronta para
+    demonstrar o percurso completo entre rota, banco de dados, template e
+    navegador.
+  </p>
+  <a class="botao" href="/publicacoes">Abrir as publicações</a>
+</section>
+
+<section aria-labelledby="fluxo" class="painel">
+  <h2 id="fluxo">Percurso trabalhado na aula</h2>
+  <ol class="etapas">
+    <li><strong>Navegador:</strong> solicita um endereço.</li>
+    <li><strong>Express:</strong> identifica a rota correspondente.</li>
+    <li><strong>Sequelize:</strong> consulta os registros no SQLite.</li>
+    <li><strong>Handlebars:</strong> combina os dados com o template.</li>
+    <li><strong>Servidor:</strong> devolve a página HTML ao navegador.</li>
+  </ol>
+</section>
