@@ -1,0 +1,32 @@
+<article class="cartao-espaco">
+  <div class="cartao-espaco__icone">
+    <img
+      src="/{{icone}}"
+      alt="Ícone do espaço {{nome}}"
+      width="40"
+      height="40"
+      loading="lazy"
+    >
+  </div>
+
+  <h2 class="cartao-espaco__nome">{{nome}}</h2>
+
+  <p class="cartao-espaco__local">{{localizacao}}</p>
+
+  <p class="cartao-espaco__info">
+    <strong>Capacidade:</strong> {{pessoas capacidade}}
+  </p>
+
+  <p class="cartao-espaco__info">
+    <strong>Recursos:</strong> {{resumir recursos 70}}
+  </p>
+
+  <span class="situacao situacao--{{classeSituacao situacao}}">
+    <span class="situacao__marca" aria-hidden="true"></span>
+    {{situacao}}
+  </span>
+
+  <a class="botao botao--contorno" href="/espacos/{{id}}">
+    Detalhes<span class="sr-only"> de {{nome}}</span>
+  </a>
+</article>

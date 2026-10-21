@@ -1,0 +1,18 @@
+<header class="titulo-pagina">
+  <h1>{{titulo}}</h1>
+
+  <p class="contador">{{registros quantidade}}</p>
+</header>
+
+{{#if possuiEspacos}}
+  <section class="grade-espacos" aria-label="Lista de laboratórios e espaços">
+    {{#each espacos}}
+      {{> componente-laboratorios-espacos}}
+    {{/each}}
+  </section>
+{{else}}
+  <section class="estado-vazio">
+    <h2>Nenhum registro foi encontrado</h2>
+    <p>Ainda não há laboratórios ou espaços cadastrados no sistema.</p>
+  </section>
+{{/if}}

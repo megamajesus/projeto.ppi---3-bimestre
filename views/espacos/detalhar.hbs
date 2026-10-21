@@ -1,0 +1,51 @@
+<nav class="trilha" aria-label="Você está em">
+  <ol>
+    <li><a href="/">Início</a></li>
+    <li><a href="/espacos">Espaços</a></li>
+    <li aria-current="page">Registro {{espaco.id}}</li>
+  </ol>
+</nav>
+
+<div class="detalhe-layout">
+  <article class="detalhe-principal">
+    <h1>{{espaco.nome}}</h1>
+
+    <dl class="ficha">
+      <div class="ficha__linha">
+        <dt>Nome</dt>
+        <dd>{{espaco.nome}}</dd>
+      </div>
+      <div class="ficha__linha">
+        <dt>Localização</dt>
+        <dd>{{espaco.localizacao}}</dd>
+      </div>
+      <div class="ficha__linha">
+        <dt>Capacidade</dt>
+        <dd>{{pessoas espaco.capacidade}}</dd>
+      </div>
+      <div class="ficha__linha">
+        <dt>Recursos</dt>
+        <dd>{{espaco.recursos}}</dd>
+      </div>
+      <div class="ficha__linha">
+        <dt>Situação</dt>
+        <dd>{{espaco.situacao}}</dd>
+      </div>
+    </dl>
+  </article>
+
+  <aside class="detalhe-lateral" aria-label="Situação atual do espaço">
+    <section class="situacao-destaque situacao-destaque--{{classeSituacao espaco.situacao}}">
+      <p class="situacao-destaque__rotulo">Situação atual</p>
+
+      <p class="situacao situacao--{{classeSituacao espaco.situacao}} situacao--grande">
+        <span class="situacao__marca" aria-hidden="true"></span>
+        {{espaco.situacao}}
+      </p>
+
+      <p>{{mensagemSituacao espaco.situacao}}</p>
+    </section>
+
+    <a class="botao botao--contorno botao--bloco" href="/espacos">Voltar para a lista</a>
+  </aside>
+</div>

@@ -1,0 +1,47 @@
+<section class="painel-hero" aria-labelledby="titulo-painel">
+  <h1 id="titulo-painel">Painel de laboratórios e espaços</h1>
+
+  <p>
+    Acompanhe informações, destaques e registros recentes. O sistema
+    Laboratórios e Espaços reúne laboratórios, salas especializadas e
+    espaços coletivos, com localização, capacidade, recursos e situação
+    atual de cada um.
+  </p>
+
+  <a class="botao botao--claro" href="/espacos">Consultar espaços</a>
+</section>
+
+<section class="destaques" aria-labelledby="titulo-destaques">
+  <h2 id="titulo-destaques">Destaques do portal</h2>
+
+  {{#if destaques.length}}
+    <div class="grade-destaques">
+      {{#each destaques}}
+        <article class="destaque">
+          <h3>{{nome}}</h3>
+          <p class="destaque__texto">Espaço em destaque</p>
+          <p class="destaque__texto">{{localizacao}} · {{pessoas capacidade}}</p>
+          <span class="situacao situacao--{{classeSituacao situacao}}">
+            <span class="situacao__marca" aria-hidden="true"></span>
+            {{situacao}}
+          </span>
+          <a class="botao botao--contorno" href="/espacos/{{id}}">
+            Ver detalhes<span class="sr-only"> de {{nome}}</span>
+          </a>
+        </article>
+      {{/each}}
+    </div>
+  {{else}}
+    <p class="estado-vazio">Nenhum registro foi encontrado.</p>
+  {{/if}}
+</section>
+
+<section class="sobre" id="sobre" aria-labelledby="titulo-sobre">
+  <h2 id="titulo-sobre">Sobre o sistema</h2>
+  <p>
+    O portal foi criado para que estudantes, professores e servidores
+    encontrem o espaço certo para cada atividade: aulas práticas, oficinas,
+    eventos ou estudo em grupo. Consulte a lista completa para ver a
+    situação de cada espaço — Disponível, Em uso ou Em manutenção.
+  </p>
+</section>
